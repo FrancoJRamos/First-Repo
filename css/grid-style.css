@@ -1,0 +1,310 @@
+/*Try to redo original style sheet to use a grid format*/
+
+/*Import from 4/3/22, will be edited and therefore different that the original file*/
+
+/*Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Noto+Sans+Display&family=Roboto&display=swap');
+
+/* Reset Style Rules */
+HTML, *
+{
+    padding:0;
+    margin:0;
+    border:0;
+    
+}
+/* ---General Site Styles--- */
+body
+{
+    background: linear-gradient(#281D54 ,#294294 20%,80%, #281D54);
+    color:#D9A925;
+    font-family:"Roboto",sans-serif;
+    
+}
+a
+{
+    color: #fac739;
+}
+p 
+{
+    color:#C7C7C7;
+    font-family:"Roboto",sans-serif;
+    font-size:1.25rem;
+    padding-bottom: 0.5rem;
+}
+/* Class Rules */
+.bright
+{
+    font-family:"Noto Sans Display",sans-serif;
+    color:#fac739;
+}
+.large
+{
+    font-size:3rem;
+}
+.medium
+{
+    font-size:2.1875rem;
+}
+.buttonlink
+{
+    /*4.10.22 the font-family rule isn't picking up noto sans display after using a new import rule to include alegreya*/
+
+    font-family:"Noto Sans Display", sans-serif;
+    background-color:#294294;
+    padding: 10px 0px;
+    margin: 2% 0;
+    border: 3px solid #fac739;
+    color:#fac739;
+    text-decoration:none;
+    min-width: 100%;
+    width:13rem;
+    transition:background-color, color;
+    transition-duration: 0.5s;
+    cursor:pointer;
+    display:block;
+    text-align:center;
+}
+.buttonlink:hover
+{
+    background-color:#fac739;
+    color:#294294;
+}
+/* ---Header Styles--- */
+#checkbox
+{
+    display:none;
+}
+#icon
+{
+    width:10%;
+    height:100%;
+    margin:auto;
+    cursor:pointer;
+    display:flex;
+    justify-content: center;
+}
+#icon img
+{
+    height:100%;
+    object-fit:scale-down;
+    
+    margin:auto;
+}
+#checkbox:checked~ul
+{
+    display:block;
+}
+.navmenu
+{
+    width:100%;
+    margin:auto;
+}
+header ul
+{
+    position: relative;
+    z-index:999;
+    display:none;
+    width:13rem;
+    margin:auto;
+    
+}
+header ul li 
+{
+    list-style-type:none;
+    font-family: 'Noto Sans Display', sans-serif;
+    padding: 0.5rem;
+}
+header ul a img
+{
+    padding: 0rem 0rem;
+    height:7rem;
+    width:7rem;
+}
+
+.homebutton
+{
+    display:none;
+}
+
+
+/*---Main Styles---*/
+/*4.10.22 Start of trying to implement grid layout*/
+main
+{
+    width: 100%;
+    outline: solid red 1px;
+}
+.container
+/*4.10.22 best practice? multiple grids or one single? for use on headings and main content*/
+{
+    display:grid;
+    grid-template-columns: 5% 5% 40% 40% 5% 5%; 
+
+}
+.item
+/*Trying to use an empty div as a dummy element to check the grid's functionality*/
+{
+    
+    background-color: pink;
+    min-width: 200px;
+    height :200px;
+    grid-column-start: 1;
+    grid-column-end: span 4;
+}
+.bioword
+{
+    grid-column-start: 3;
+    grid-column-end:5;
+    font-family:"Alegreya",serif;/*4.10.22 changing the p font to alegreya breaks the font rule in button links and no where else*/
+    padding-top: 00.5rem;
+    text-align: center;
+}
+/* ---Footer Styles--- */
+
+footer
+{
+    padding-top: 2rem;
+}
+footer p
+{
+    color:#D9A925;
+}
+footer ul
+{
+    
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    
+}
+footer ul li
+{
+    padding:1rem;
+    list-style-type:none;
+    font-family:"Roboto"
+}
+footer ul li a
+{
+    text-decoration:none;
+}
+footer ul li a:hover
+{
+    text-decoration:underline;
+}
+
+/* Media Queries */
+@media screen and (max-width: 480px)
+/*Small Smartphone screens*/
+{   
+    .navmenu
+    {
+        height:5rem;
+        
+    }
+
+    footer
+    {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+    
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px)
+/*Large Smartphone/Small Tablet screens*/
+{
+    .navmenu
+    {
+        height:5rem;
+    }
+
+    footer
+    {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1279px)
+/*Large Tablet/Small Desktop screens*/
+{
+    h1
+    {
+        text-align:left;
+        width:300px;
+        margin:0;
+    }
+    .navmenu
+    {
+        height:8rem;
+        justify-content:space-evenly;
+    }
+    
+    header ul, .homebutton
+    {
+        display:block;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+    /*4/2/22 assigning .homelink to be able to hide one button from the navigation when expanded and it won't go away*/
+    button .homelink, #icon
+    {
+        display:none;
+    }
+    footer
+    {
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+    }
+}
+
+@media screen and (min-width: 1280px)
+/*Large Desktop screens*/
+{
+    
+    
+    .navmenu
+    {
+        width:100%;
+        height:10rem;
+    }
+    header ul
+    {
+        width:90%;
+        display:block;
+        display:flex;
+        justify-content:flex-end;
+        align-items:center;
+    }
+    .homebutton
+    {
+        display:block;
+    }
+    /*4/2/22 assigning .homelink to be able to hide one button from the navigation when expanded and it won't go away*/
+    button .homelink, #icon
+    {
+        display:none;
+    }
+    h1
+    {
+        text-align:left;
+        width:300px;
+        margin:0;
+    }
+
+    footer
+    {
+        width:95%;
+        margin:auto;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+    }
+}

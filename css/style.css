@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@600&family=Roboto&display=swap');
 
 /* Reset Style Rules */
-    HTML
+    HTML, *
     {
         padding:0;
         margin:0;
@@ -62,8 +62,6 @@
         cursor:pointer;
         display:block;
         text-align:center;
-        
-        
     }
     .buttonlink:hover
     {
@@ -251,6 +249,30 @@
         text-decoration:underline;
     }
 
+/*  Bio Page    */
+    
+    .biosection
+    {
+        outline: solid red 1px;
+        margin:auto;
+        width:100%;
+        position: relative;
+        text-align: center;
+        background-color: aliceblue;
+    }
+    .biopic
+    {
+        opacity: 30%;
+        width:100%;
+        z-index: -1;/*4.09.22 can't get the text to overlay over the image*/
+        /*object-fit: contain;4.09.22 can't get object-fit to resize the image to the width of its parent container
+        without taking it out of the flow of the page with position:absolute*/
+    }
+    .bioword
+    {
+       
+        z-index:1;
+    }
 /*  Contact Page    */
 #contact
 {
@@ -276,6 +298,7 @@
     display:block;
     text-align:left;
     padding-left: 1%;
+    outline: solid yellow 1px;
 }
 .accordion:hover, .active
     {
@@ -288,8 +311,10 @@
     margin:auto;
     width:inherit;
     padding: 0 18px;
-    /*display:none;*/
+    
+    display:none;
     overflow:hidden;
+    
 }
 .panel p
 {
