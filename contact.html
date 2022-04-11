@@ -7,8 +7,7 @@
     <title>Contact</title>
     <!--link to main css file-->
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <!--link to contact js file-->
-    <script src="script/contact.js"></script>
+    
 </head>
 <body>
     <header class="navmenu">
@@ -17,7 +16,7 @@
 
         <ul>
             <li><a class="buttonlink medium homelink" href="index.html">Home</a></li>
-            <li><a class="buttonlink medium" href="#">Bio</a></li>
+            <li><a class="buttonlink medium" href="bio.html">Bio</a></li>
             <li><a class="buttonlink medium" href="contact.html">Contact</a></li>
             <li><a class="buttonlink medium" href="#">Animations</a></li>
             <li><a class="buttonlink medium" href="#">Designs</a></li>
@@ -53,7 +52,7 @@
                     <input type="radio" name="Topic" id="other" value="Other">
                     <label for="other">Other</label><br><br>
 
-                    <label for="message">Please enter additional information:</label>
+                    <label for="message">Please enter additional information:</label><br>
                     <textarea id="message" name="message" rows="4" cols="50">Your Message goes Here...</textarea><br><br>
 
                     <input type="reset" value="Reset" id="Reset">
@@ -67,12 +66,33 @@
             <div class="panel">
                 <p>Check out additional posts and galleries here</p>
                 <ul class="imagelinks ">
-                    <li><a href="https://www.instagram.com/whowantssometacos/" target="_blank"><img src = "images/Contact_Button_1.png" alt="Instagram profile" ></a></li>
-                    <li><a href="https://www.behance.net/francoramos3" target="_blank"><img src = "images/Contact_Button_2.png" alt="Behance profile" ></a></li>
-                    <li><a href="https://www.youtube.com/channel/UC16Cc-SQcnagAdcfjKlC7bQ" target="_blank"><img src = "images/Contact_Button_3.png" alt="Youtube profile" ></a></li>
+                    <li><a href="https://www.instagram.com/whowantssometacos/" target="_blank"><img src = "images/contact_button_1.png" alt="Instagram profile" ></a></li>
+                    <li><a href="https://www.behance.net/francoramos3" target="_blank"><img src = "images/contact_button_2.png" alt="Behance profile" ></a></li>
+                    <li><a href="https://www.youtube.com/channel/UC16Cc-SQcnagAdcfjKlC7bQ" target="_blank"><img src = "images/contact_button_3.png" alt="Youtube profile" ></a></li>
                 </ul>
             </div>
         </section>
+
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function() {
+             /* Toggle between adding and removing the "active" class,
+             to highlight the button that controls the panel */
+            this.classList.toggle("active");
+
+             /* Toggle between hiding and showing the active panel */
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") 
+            {
+            panel.style.display = "none";
+            } 
+            else {panel.style.display = "block";}
+                });
+            }
+        </script>
     </main>
 
     <footer>
