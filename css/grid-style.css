@@ -70,6 +70,14 @@ p
     background-color:#fac739;
     color:#294294;
 }
+.robototext
+{
+    font-family:"Roboto",sans-serif;
+}
+.displaytext
+{
+    font-family:"Noto Sans Display",sans-serif;
+}
 /* ---Header Styles--- */
 #checkbox
 {
@@ -135,12 +143,18 @@ main
     width: 100%;
     outline: solid red 1px;
 }
+h1{
+    
+    margin:auto;
+    
+    outline: solid 1px salmon;
+}
 .container
 /*4.10.22 best practice? multiple grids or one single? for use on headings and main content*/
 {
     display:grid;
     grid-template-columns: 5% 5% 40% 40% 5% 5%; 
-
+    grid-template-rows: fr fr fr fr;
 }
 .item
 /*Trying to use an empty div as a dummy element to check the grid's functionality*/
@@ -159,6 +173,19 @@ main
     font-family:"Alegreya",serif;/*4.10.22 changing the p font to alegreya breaks the font rule in button links and no where else*/
     padding-top: 00.5rem;
     text-align: center;
+    grid-row-start:2;
+    grid-row-end:3;
+    padding-bottom:0.5rem;
+}
+.biohead
+{
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end:2;
+    padding-bottom:1rem;
+    outline: solid green 1px;
+    text-align:center;
 }
 /* ---Footer Styles--- */
 
