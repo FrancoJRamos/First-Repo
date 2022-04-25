@@ -40,7 +40,11 @@
     {
         font-size:2.1875rem;
     }
-    
+    .center
+    {
+        margin:auto;
+        
+    }
     .buttonlink
     /*3.27.22 issue where setting a width as a percentage fits the size of each string in the buttton
     to get around this I've used fixed numbers that allow me to get a uniform width but it discourages fluidity
@@ -208,17 +212,36 @@
     }
     .imagelinks
     {
-        
+        display:flex;
+        flex-direction:column;
         justify-content:space-between;
         align-items:center;
     }
-    main section .imagelinks li button /*4/2/22 trying to find a way to reduce or remove the margins for the buttons and the image links, my guess is that due to inheritance from one of its parent elements I am unable to put in a rule to do so*/
-    {
-        margin:0;
-    }
+   
     main section div
     {
         margin-bottom:20%;/*4.2.22 doesn't appear to do anything*/
+    }
+    fieldset
+    {
+        border:solid 2px;
+        margin-bottom:01rem;
+    }
+    legend
+    {
+        padding-right:  0.5rem;
+        padding-left: 0.5rem;
+        margin-left: 0.5rem;;
+    }
+    input
+    {
+        padding:0.2rem;
+        margin-bottom:0.2rem;
+        margin-left:00.5rem;
+    }
+    label
+    {
+        margin-left:0.5rem;
     }
 /* ---Footer Styles--- */
     
@@ -417,7 +440,7 @@ in order to prevent this each button should be as wide as the animations button*
         
         section div ul li a img
         {
-            width: 100%;     
+            width: 80%;     
             margin: 0.5rem;
             min-height: 2.5rem;
             min-width:2.5rem;
@@ -474,7 +497,7 @@ in order to prevent this each button should be as wide as the animations button*
             flex-direction:row;
             justify-content:space-evenly;
             width:100%;
-            margin:0 5%;
+            margin:0 auto;
             /*outline: solid blue 1px;*/
             
         }   
@@ -482,11 +505,12 @@ in order to prevent this each button should be as wide as the animations button*
         .imagelinks
         {
             display:flex;
-            flex-direction: column;
+            flex-direction: row;
+            margin:auto;
         }
         section div ul li a img
         {
-            width: 80%;     /*have a fixed width for scrolling menus? or keep it as a function of the navigation buttons?*/
+            width: 70%;     /*have a fixed width for scrolling menus? or keep it as a function of the navigation buttons?*/
             margin: 0.5rem;
             min-height: 50%;
             min-width:50%;
@@ -552,12 +576,12 @@ in order to prevent this each button should be as wide as the animations button*
         .imagelinks
         {
             display:flex;
-            flex-direction: column;
+            flex-direction: row;
 
         }
         section div ul li a img
         {
-            width: 80%;     
+            width: 70%;     
             margin: 0.5rem;
         }
         footer

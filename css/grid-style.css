@@ -150,11 +150,17 @@ h1{
     outline: solid 1px salmon;
 }
 .container
-/*4.10.22 best practice? multiple grids or one single? for use on headings and main content*/
 {
     display:grid;
-    grid-template-columns: 5% 5% 40% 40% 5% 5%; 
-    grid-template-rows: fr fr fr fr;
+    grid-template-columns: 5% 5% 10% 10% 10% 10% 10% 10% 10% 10% 5% 5%; 
+    grid-template-rows: 10% 1fr 10%;
+    margin-bottom: 3rem;
+}
+.container-projects
+{
+    display:grid;
+    grid-template-columns: 5% 5% 10% 10% 10% 10% 10% 10% 10% 10% 5% 5%; 
+    grid-template-rows: 7% 1fr 7% 1fr 7% 1fr 7% 1fr;
 }
 .item
 /*Trying to use an empty div as a dummy element to check the grid's functionality*/
@@ -162,30 +168,131 @@ h1{
     
     background-color: pink;
     min-width: 200px;
+    height :400px;
+    grid-column-start: 3;
+    grid-column-end: 11;
+    grid-row-start:2;
+    grid-row-end:3;
+}
+#project-description
+{
+    background-color: rgb(157, 216, 180);
+    min-width: 100px;
     height :200px;
-    grid-column-start: 1;
-    grid-column-end: span 4;
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start:2;
+    grid-row-end: 3;
+}
+#project-resource
+{
+    background-color: rgb(202, 157, 216);
+    min-width: 100px;
+    height :200px;
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start:4;
+    grid-row-end: 5;
+}
+#project-tag
+{
+    background-color: rgb(207, 216, 157);
+    min-width: 100px;
+    height :200px;
+    grid-column-start: 4;
+    grid-column-end: 10;
+    grid-row-start:6;
+    grid-row-end: 7;
+}
+#project-project
+{
+    background-color: rgb(157, 185, 216);
+    min-width: 100px;
+    height :200px;
+    grid-column-start: 4;
+    grid-column-end: 10;
+    grid-row-start:8;
+    grid-row-end: 9;
 }
 .bioword
 {
     grid-column-start: 3;
-    grid-column-end:5;
+    grid-column-end:11;
     font-family:"Alegreya",serif;/*4.10.22 changing the p font to alegreya breaks the font rule in button links and no where else*/
     padding-top: 00.5rem;
     text-align: center;
     grid-row-start:2;
     grid-row-end:3;
     padding-bottom:0.5rem;
+    outline:solid 1px red;
+    
 }
 .biohead
 {
-    grid-column-start: 2;
-    grid-column-end: 6;
+    grid-column-start: 3;
+    grid-column-end: 11;
     grid-row-start: 1;
     grid-row-end:2;
     padding-bottom:1rem;
     outline: solid green 1px;
     text-align:center;
+}
+#bio-story-1
+{
+    
+    background-image:url(image/bio-story/bio_bg_1.png);
+    background-color:rgba(61, 71, 80,0.5);
+    margin-bottom:3rem;
+}
+#bio-story-2
+{
+    
+    background-image:url(image/bio-story/bio_bg_2.png);
+    background-color:rgba(76, 61, 80, 0.5);
+    margin-bottom:3rem;
+}
+#bio-story-3
+{
+    
+    background-image:url(image/bio-story/bio_bg_2.png);
+    background-color:rgba(61, 80, 74, 0.5);
+    margin-bottom:3rem;
+}
+#project-title
+{
+    grid-column-start: 3;
+    grid-column-end: 11;
+    outline:solid 1px pink;
+    grid-row-start: 1;
+    text-align:center;
+    margin:auto;
+}
+#project-resource-title
+{
+    grid-column-start: 3;
+    grid-column-end: 11;
+    outline:solid 1px pink;
+    grid-row-start: 3;
+    text-align:center;
+    margin:auto;
+}
+#project-tag-title
+{
+    grid-column-start: 3;
+    grid-column-end: 11;
+    outline:solid 1px pink;
+    grid-row-start: 5;
+    text-align:center;
+    margin:auto;
+}
+#project-project-title
+{
+    grid-column-start: 3;
+    grid-column-end: 11;
+    outline:solid 1px pink;
+    grid-row-start: 7;
+    text-align:center;
+    margin:auto;
 }
 /* ---Footer Styles--- */
 
@@ -290,6 +397,48 @@ footer ul li a:hover
         align-items:center;
         justify-content:space-between;
     }
+    /*editing grid layout of the project pages*/
+    #project-title
+    {
+        grid-column-start:3;
+        grid-column-end:7;
+    }
+    #project-description
+    {
+        grid-column-start:3;
+        grid-column-end:7;
+    }
+    #project-resource-title
+    {
+        grid-column-start:7;
+        grid-column-end:11;
+        grid-row-start:1;
+    }
+    #project-resource
+    {
+        grid-column-start:7;
+        grid-column-end:11;
+        grid-row-start:2;
+        grid-row-end:3;
+    }
+    #project-tag-title
+    {
+        grid-row-start:3;
+    }
+    #project-tag
+    {
+        grid-row-start:4;
+        grid-row-end:5;
+    }
+    #project-project-title
+    {
+        grid-row-start:5;
+    }
+    #project-project
+    {
+        grid-row-start:6;
+        grid-row-end:7;
+    }
 }
 
 @media screen and (min-width: 1280px)
@@ -333,5 +482,47 @@ footer ul li a:hover
         display:flex;
         align-items:center;
         justify-content:space-between;
+    }
+    /*editing grid layout of the project pages*/
+    #project-title
+    {
+        grid-column-start:3;
+        grid-column-end:7;
+    }
+    #project-description
+    {
+        grid-column-start:3;
+        grid-column-end:7;
+    }
+    #project-resource-title
+    {
+        grid-column-start:7;
+        grid-column-end:11;
+        grid-row-start:1;
+    }
+    #project-resource
+    {
+        grid-column-start:7;
+        grid-column-end:11;
+        grid-row-start:2;
+        grid-row-end:3;
+    }
+    #project-tag-title
+    {
+        grid-row-start:3;
+    }
+    #project-tag
+    {
+        grid-row-start:4;
+        grid-row-end:5;
+    }
+    #project-project-title
+    {
+        grid-row-start:5;
+    }
+    #project-project
+    {
+        grid-row-start:6;
+        grid-row-end:7;
     }
 }
