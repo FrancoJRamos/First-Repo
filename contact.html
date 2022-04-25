@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <!--link to main css file-->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/contact-style.css">
     
 </head>
 <body>
@@ -18,8 +18,8 @@
             <li><a class="buttonlink medium homelink" href="index.html">Home</a></li>
             <li><a class="buttonlink medium" href="bio.html">Bio</a></li>
             <li><a class="buttonlink medium" href="contact.html">Contact</a></li>
-            <li><a class="buttonlink medium" href="#">Animations</a></li>
-            <li><a class="buttonlink medium" href="#">Designs</a></li>
+            <li><a class="buttonlink medium" href="animations.html">Animations</a></li>
+            <li><a class="buttonlink medium" href="designs.html">Designs</a></li>
             <li class="homebutton"><a href="index.html" ><img src = "images/logo.png" alt="Shining Drive Logo" ></a></li>
         </ul>
     </header>
@@ -35,28 +35,31 @@
 
             <button class="accordion medium">Inquiries</button>
             <div class="panel">
-                <p>Please enter your Contact Information bleow:</p>
+                <p>Please complete the form bleow:</p>
                 <form method="post">
-                    
-                    <label for="name">Your Name: </label>
-                    <input type="text" name="Name" id="name" size="20"><br>
-
-                    <label for="email">Your Email: </label>
-                    <input type="email" name="Email" id="email" size="20"><br>
-
-                    <p>Select Your Topic:</p>
-                    <input type="radio" name="Topic" id="animations"  value="Animations">
-                    <label for="animations">Animations</label><br>
-                    <input type="radio" name="Topic" id="designs"  value="Designs">
-                    <label for="designs">Designs</label><br>
-                    <input type="radio" name="Topic" id="other" value="Other">
-                    <label for="other">Other</label><br><br>
-
-                    <label for="message">Please enter additional information:</label><br>
-                    <textarea id="message" name="message" rows="4" cols="50">Your Message goes Here...</textarea><br><br>
-
-                    <input type="reset" value="Reset" id="Reset">
-                    <input type="submit" value="Submit" id="Submit">
+                    <fieldset>
+                        <legend>Please enter your information</legend>
+                        <label for="name">Your Name: </label>
+                        <input type="text" name="Name" id="name" size="20"><br>
+                        <label for="email">Your Email: </label>
+                        <input type="email" name="Email" id="email" size="20"><br>
+                    </fieldset>    
+                    <fieldset>
+                        <legend>Select a Topic</legend>
+                        <input type="radio" name="Topic" id="animations"  value="Animations">
+                        <label for="animations">Animations</label><br>
+                        <input type="radio" name="Topic" id="designs"  value="Designs">
+                        <label for="designs">Designs</label><br>
+                        <input type="radio" name="Topic" id="other" value="Other">
+                        <label for="other">Other</label><br>
+                    </fieldset>
+                        
+                        <label for="message">Please enter additional information:</label><br>
+                        <textarea id="message" name="message" rows="4" cols="50" placeholder="Your Message goes Here..."></textarea><br><br>
+                    <div class="center">
+                        <input type="reset" value="Reset" id="Reset">
+                        <input type="submit" value="Submit" id="Submit">
+                    </div>
                 </form>
                 <!--4.2.22 do the reset and submit values have to be include in the same form tag to work?
                 if so how to group them together to format them to take up each corner as easily as flexbox?-->
@@ -96,12 +99,12 @@
     </main>
 
     <footer>
-        <p>footer text</p>
+        <p class="robototext">footer text</p>
         <ul>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">Linkedin</a></li>
-            <li><a href="#">Behance</a></li>
-            <li><a href="#">Youtube</a></li>
+            <li><a href="https://www.instagram.com/whowantssometacos/" target="_blank">Instagram</a></li>
+            <li><a href="https://www.behance.net/francoramos3" target="_blank">Behance</a></li>
+            <li><a href="https://www.youtube.com/channel/UC16Cc-SQcnagAdcfjKlC7bQ" target="_blank">Youtube</a></li>
+            <li><a href="https://www.linkedin.com/in/francojramos/" target = "_blank">Linkedin</a></li>
         </ul>
     </footer>
 </body>
