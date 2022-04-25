@@ -326,6 +326,14 @@ form
     text-align: left;
     font-family: "Roboto", sans-serif;
 }
+input
+{
+    background-color: #C7C7C7;
+}
+textarea
+{
+    background-color: #C7C7C7;
+}
 
 /* Media Queries */
 /*3.19.22 images resize at different rates until it reaches the last media query and 
