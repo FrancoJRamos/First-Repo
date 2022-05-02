@@ -36,13 +36,13 @@
             <button class="accordion medium">Inquiries</button>
             <div class="panel">
                 <p>Please complete the form bleow:</p>
-                <form method="post">
+                <form method="post" id="my-form">
                     <fieldset>
                         <legend>Please enter your information</legend>
                         <label for="name">Your Name: </label>
-                        <input type="text" name="Name" id="name" size="20"><br>
+                        <input type="text" name="Name" id="name" size="20" required><br>
                         <label for="email">Your Email: </label>
-                        <input type="email" name="Email" id="email" size="20"><br>
+                        <input type="email" name="Email" id="email" size="20" required><br>
                     </fieldset>    
                     <fieldset>
                         <legend>Select a Topic</legend>
@@ -55,7 +55,7 @@
                     </fieldset>
                         
                         <label for="message">Please enter additional information:</label><br>
-                        <textarea id="message" name="message" rows="4" cols="50" placeholder="Your Message goes Here..."></textarea><br><br>
+                        <textarea id="message" name="message" rows="4" cols="50" placeholder="Your Message goes Here..." required></textarea><br><br>
                     <div class="center">
                         <input type="reset" value="Reset" id="Reset">
                         <input type="submit" value="Submit" id="Submit">
