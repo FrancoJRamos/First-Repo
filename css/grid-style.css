@@ -11,7 +11,8 @@ HTML, *
     padding:0;
     margin:0;
     border:0;
-    
+    list-style-type:none;
+    text-decoration: none;
 }
 /* ---General Site Styles--- */
 body
@@ -31,6 +32,8 @@ p
     font-family:"Roboto",sans-serif;
     font-size:1.25rem;
     padding-bottom: 0.5rem;
+    margin:auto;
+    width:100%;
 }
 /* Class Rules */
 .bright
@@ -141,13 +144,13 @@ header ul a img
 main
 {
     width: 100%;
-    outline: solid red 1px;
+    /*outline: solid red 1px;*/
 }
 h1{
     
     margin:auto;
     
-    outline: solid 1px salmon;
+    /*outline: solid 1px salmon;*/
 }
 .container
 {
@@ -162,58 +165,240 @@ h1{
     grid-template-columns: 5% 5% 10% 10% 10% 10% 10% 10% 10% 10% 5% 5%; 
     grid-template-rows: 7% 1fr 7% 1fr 7% 1fr 7% 1fr;
 }
+#project-title
+{
+    grid-column-start: 3;
+    grid-column-end: 11;
+    /*outline:solid 1px pink;*/
+    grid-row-start: 1;
+    text-align:center;
+    margin:auto;
+}
+#project-resource-title
+{
+    grid-column-start: 3;
+    grid-column-end: 11;
+    /*outline:solid 1px pink;*/
+    grid-row-start: 3;
+    text-align:center;
+    margin:auto;
+}
+#project-tag-title
+{
+    grid-column-start: 3;
+    grid-column-end: 11;
+    /*outline:solid 1px pink;*/
+    grid-row-start: 5;
+    text-align:center;
+    margin:auto;
+}
+#project-project-title
+{
+    grid-column-start: 3;
+    grid-column-end: 11;
+    /*outline:solid 1px pink;*/
+    grid-row-start: 7;
+    text-align:center;
+    margin:auto;
+}
 .item
 /*Trying to use an empty div as a dummy element to check the grid's functionality*/
 {
     
     background-color: pink;
     min-width: 200px;
-    height :400px;
+    max-height: 829px;
+    min-height: 200px;
     grid-column-start: 3;
     grid-column-end: 11;
     grid-row-start:2;
     grid-row-end:3;
+    margin-bottom: 3rem;
+    margin-top: 0;
 }
 #project-description
 {
-    background-color: rgb(157, 216, 180);
+    /*background-color: rgb(157, 216, 180);*/
     min-width: 100px;
-    height :200px;
-    grid-column-start: 5;
-    grid-column-end: 9;
+    grid-column-start: 3;
+    grid-column-end: 11;
     grid-row-start:2;
     grid-row-end: 3;
+    text-align: center;
+    margin: auto;
+    padding:1rem;
+    max-width: 100%;
 }
 #project-resource
 {
-    background-color: rgb(202, 157, 216);
+    /*background-color: rgb(202, 157, 216);*/
     min-width: 100px;
     height :200px;
     grid-column-start: 5;
     grid-column-end: 9;
     grid-row-start:4;
     grid-row-end: 5;
+    margin:auto;
+    padding:1rem;
 }
 #project-tag
 {
-    background-color: rgb(207, 216, 157);
+    /*background-color: rgb(207, 216, 157);*/
     min-width: 100px;
-    height :200px;
     grid-column-start: 4;
     grid-column-end: 10;
     grid-row-start:6;
     grid-row-end: 7;
+    max-height: 100px;
+    margin:auto;
+    max-width: 100%;
+    
 }
 #project-project
 {
-    background-color: rgb(157, 185, 216);
+    /*background-color: rgb(157, 185, 216);*/
     min-width: 100px;
-    height :200px;
+    min-height :50px;
     grid-column-start: 4;
     grid-column-end: 10;
     grid-row-start:8;
     grid-row-end: 9;
+    max-width: 100%;
+    max-height: 100%;
+    margin-bottom:3rem;
 }
+video,.portfolio-image
+{
+    width:100% !important;
+    height:auto !important;
+}
+.project-tag-scroll
+{
+    
+    display:flex;
+    flex-direction: row;
+    overflow-x:scroll;
+    max-height: 12rem;
+    overflow-y: hidden;
+    align-items:center;
+    width:inherit;
+    
+    
+
+}
+.project-project-scroll
+{
+    display:flex;
+    flex-direction: row;
+    overflow-x:scroll;
+    max-height: 24rem;
+    overflow-y: hidden;
+    align-items:center;
+}
+.tag-button
+{
+    font-family:"Noto Sans Display", sans-serif;
+    background-color:#294294;
+    
+    margin: 2rem 0.5rem;
+    border: 3px solid #fac739;
+    color:#fac739;
+    text-decoration:none;
+    transition:background-color, color;
+    transition-duration: 0.5s;
+    cursor:pointer;
+    display:block;
+    text-align:center;
+    width:10rem;
+    height:100%;
+    text-align: center;
+    align-items:center;
+}
+.tag-button:hover
+{
+    background-color:#fac739;
+    color:#294294;
+}
+.project-button
+{
+    
+    justify-content:space-between;
+    align-items:center;
+    border:#fac739 5px solid;
+    min-width:13rem;
+    min-height:13rem;
+    margin: 0.5rem;
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+/*project page icons*/
+#project-animation-city
+{
+    background-image:url(../images/buttons/animations_button_project_1.png);
+    
+}
+#project-animation-mouse
+{
+    background-image:url(../images/buttons/animations_button_project_2.png);
+}
+#project-animation-hawk
+{
+    background-image:url(../images/buttons/animations_button_project_3.png);
+}
+#project-animation-fuego
+{
+    background-image:url(../images/buttons/Animations_Button_Project_4.png);
+}
+#project-animation-morning
+{
+    background-image:url(../images/buttons/Animations_Button_Project_5.png);
+}
+#project-animation-explosion
+{
+    background-image:url(../images/buttons/Animations_Button_Project_6.png);
+}
+#project-animation-creature
+{
+    background-image:url(../images/buttons/Animations_Button_Project_7.png);
+}
+#project-design-faces
+{
+    background-image:url(../images/buttons/designs_button_project_1.png);
+}
+#project-design-ferro
+{
+    background-image:url(../images/buttons/designs_button_project_2.png);
+}
+#project-design-keyblade
+{
+    background-image:url(../images/buttons/designs_button_project_3.png);
+}
+#project-design-ambush
+{
+    background-image:url(../images/buttons/Designs_Button_Project_4.png);
+}
+#project-design-group
+{
+    background-image:url(../images/buttons/designs_button_project_5.png);
+}
+#project-design-scythe
+{
+    background-image:url(../images/buttons/Designs_Button_Project_6.png);
+}
+#project-design-vibe
+{
+    background-image:url(../images/buttons/Designs_Button_Project_7.png);
+}
+#project-design-concrete
+{
+    background-image:url(../images/buttons/Designs_Button_Project_8.png);
+}
+#project-design-charcoal
+{
+    background-image:url(../images/buttons/Designs_Button_Project_9.png);
+}
+/*bio section elements*/
 .bioword
 {
     grid-column-start: 3;
@@ -224,8 +409,7 @@ h1{
     grid-row-start:2;
     grid-row-end:3;
     padding-bottom:0.5rem;
-    outline:solid 1px red;
-    
+    text-shadow: 2px 2px 8px #281D54;
 }
 .biohead
 {
@@ -234,66 +418,40 @@ h1{
     grid-row-start: 1;
     grid-row-end:2;
     padding-bottom:1rem;
-    outline: solid green 1px;
+    
     text-align:center;
 }
 #bio-story-1
 {
     
-    background-image:url(image/bio-story/bio_bg_1.png);
+    background-image:url(../images/bio-story/bio_bg_1.png);
     background-color:rgba(61, 71, 80,0.5);
     margin-bottom:3rem;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
 }
 #bio-story-2
 {
     
-    background-image:url(image/bio-story/bio_bg_2.png);
+    background-image:url(../images/bio-story/all-in-the-storytelling-wip.png);
     background-color:rgba(76, 61, 80, 0.5);
     margin-bottom:3rem;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
 }
 #bio-story-3
 {
     
-    background-image:url(image/bio-story/bio_bg_2.png);
+    background-image:url(../images/bio-story/Bio\ -\ thanks\ 2020wip.png);
     background-color:rgba(61, 80, 74, 0.5);
     margin-bottom:3rem;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
 }
-#project-title
-{
-    grid-column-start: 3;
-    grid-column-end: 11;
-    outline:solid 1px pink;
-    grid-row-start: 1;
-    text-align:center;
-    margin:auto;
-}
-#project-resource-title
-{
-    grid-column-start: 3;
-    grid-column-end: 11;
-    outline:solid 1px pink;
-    grid-row-start: 3;
-    text-align:center;
-    margin:auto;
-}
-#project-tag-title
-{
-    grid-column-start: 3;
-    grid-column-end: 11;
-    outline:solid 1px pink;
-    grid-row-start: 5;
-    text-align:center;
-    margin:auto;
-}
-#project-project-title
-{
-    grid-column-start: 3;
-    grid-column-end: 11;
-    outline:solid 1px pink;
-    grid-row-start: 7;
-    text-align:center;
-    margin:auto;
-}
+
 /* ---Footer Styles--- */
 
 footer
